@@ -19,7 +19,7 @@
             const quoteText = Quotedata[randomIdx].text;
             const auth = Quotedata[randomIdx].author;
 
-            if (!auth) author = "Anonymous";
+//             if (!auth) author = "Anonymous";
             Quotedata.author==null?(author.innerText="Anonymous"):(auhtor.innerText=`${Quotedata.author}`);
             document.getElementById("QuoteText").innerHTML = quoteText;
             document.getElementById("author").innerHTML = "-"+ auth;
