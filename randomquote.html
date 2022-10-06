@@ -14,10 +14,10 @@
         const GenerateQuote = async () => {
             var url = "https://type.fit/api/quotes";
             const response = await fetch(url);
-            const Quote_list = await response.json();
-            const randomIdx = Math.floor(Math.random() * Quote_list.length);
-            const quoteText = Quote_list[randomIdx].text;
-            const auth = Quote_list[randomIdx].author;
+            const Quotedata = await response.json();
+            const randomIdx = Math.floor(Math.random() * Quotedata.length);
+            const quoteText = Quotedata[randomIdx].text;
+            const auth = Quotedata[randomIdx].author;
 
             if (!auth) author = "Anonymous";
             document.getElementById("QuoteText").innerHTML = quoteText;
